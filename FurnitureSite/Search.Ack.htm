@@ -1,0 +1,51 @@
+<!--Name:Manas Anand Koni..
+ID:211147668..SIT774
+ Assignment 1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-bz" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>About us</title>
+</head>
+
+<body bgcolor="#FFFF99">
+
+<?php
+/* Set oracle user login and password info */
+$dbuser = "km"; /* your deakin login */
+$dbpass = "ssid"; /* your oracle access password */
+$db = "SSID"; 
+$connect = OCILogon("localhost",$dbuser, $dbpass, $db); 
+
+if (!$connect) {
+echo "An error occurred connecting to the database"; 
+exit; 
+}
+
+/* build sql statement using form data */
+$query = "SELECT * FROM Furniture"; 
+
+/* check the sql statement for errors and if errors report them */
+$stmt = OCIParse($connect, $query); 
+//echo "SQL: $query<br>";
+if(!$stmt) {
+echo "An error occurred in parsing the sql string.\n"; 
+exit; 
+}
+OCIExecute($stmt);
+
+
+?>
+
+<h1>Search Results..</h1>
+
+<p>&nbsp;</p>
+<h3>Please Wait..We are searching your Specifications..!!</h3>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

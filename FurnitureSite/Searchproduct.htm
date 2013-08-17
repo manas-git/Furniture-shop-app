@@ -1,0 +1,92 @@
+<!--Name:Manas Anand Koni..
+ID:211147668..SIT774
+ Assignment 1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+<meta content="en-bz" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Now you can search for the furni</title>
+<style type="text/css">
+@import url('decor.css');
+.auto-style1 {
+	margin-left: 37px;
+}
+.auto-style2 {
+	margin-left: 132px;
+}
+.auto-style8 {
+	margin-left: 228px;
+}
+.auto-style10 {
+	margin-left: 0px;
+}
+</style>
+<script language="javascript">
+    function validate1(){
+var looking_for =document.test.select1.selectedIndex;
+var _price=document.test.select2.selectedIndex;
+
+
+
+if (looking_for=="0"){
+  alert('Please select one type');
+  return false;
+  }
+  
+  if (_price=="0"){
+  alert('Please select one price range');
+  return false;
+  }
+  
+   //alert (document.getElementById('Radio2').checked);
+  if (document.getElementById('Radio2').checked){
+    alert('you have opted for a eco friendly set')
+    }
+    return true;
+    }
+</script>
+
+</head>
+
+<body bgcolor="#FFFF99">
+
+<h1><em class="newStyle1">Now you can search for the furnitures which you wish to have through our 
+exclusive Product Search page.</em></h1>
+<h2>Please customize your search using the following options..</h2>
+<p>&nbsp;</p>
+<form action="Search.Ack.php" name="test" method="post" target="new" onsubmit=" return validate1()">
+	Select a Furniture Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <select class="auto-style1" name="select1" id='select1' style="width: 239px; height: 22px">
+	<option name="none">Select one</option>
+	<option name="Foam">Foamy Lux</option>
+	<option name="MilkyG">Milky Gally</option>
+	<option name="FullF">Full Foam</option>
+	<option name="AmyS">Amy Suite</option>
+	<option name="Orange">Orange Suite</option>
+	<option name="UltraMG">Ultra Milky Gally</option>
+	</select><br />
+	<br />
+	<br />
+	<br />
+	Your Price Range<select class="auto-style2" name="select2" id='select2' style="width: 234px">
+	<option name="none1">Select Range</option>
+	<option name="less1000" value="between 500 and 1000">$500-$1000</option>
+	<option name="less2000" value="between 1000 and 2000">$1000-$2000</option>
+	<option name="less3000" value="between 2000 and 3000">$2000-$3000</option>
+	<option name="more3000" value="3000">Above $3000</option>
+	</select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+	<br />
+	<br />
+	<br />
+	<br />
+	Do you prefer Eco friendly Set&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+	Yes<input id="Radio2" name="Radio2" type="radio" value="Yes" checked="checked" style="width: 95px" />No<input class="auto-style10" name="Radio2" style="width: 112px" type="radio" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+	<br />
+	<br />
+	<input class="auto-style8" name="Submit1" style="width: 340px; height: 26px;" type="submit" value="Show My Product" /></form>
+
+</body>
+
+</html>

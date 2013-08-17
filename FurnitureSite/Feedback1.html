@@ -1,0 +1,96 @@
+<!--Name:Manas Anand Koni..
+ID:211147668..SIT774
+ Assignment 1-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-bz" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Feedback</title>
+
+<script language="javascript">
+
+function validate()
+{
+ var _name=document.form1.Text1.value;
+ var _order=document.form1.Text2.value;
+ var _comment=document.form1.TextArea1.value;
+ var _email=document.form1.Text3.value;
+ 
+if (_name.length=="0"){
+alert("Please enter your name");
+return false;
+} 
+
+if (_order.length =="0"){
+
+alert ("Enter Order no.if have or else type NA");
+return false;
+}
+
+if (_comment.length=="0"){
+alert("Please write  your comments");
+return false;
+} 
+
+if (_email.length=="0"){
+alert("Enter your email id please");
+return false;
+}
+var  pos=_email.indexOf("@");
+
+if (pos<0){
+alert("Invalid email");
+return false;
+}
+
+return true;
+}
+</script>
+<link href="decor.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body bgcolor= "#FFFF99">
+
+<h1 class="newStyle1">Enquiry/Feedback:</h1>
+<form method="post" action="feedback.acknowledge.php" name="form1" onsubmit="return validate()" target="_blank">
+<table style="width: 99%">
+	<tr>
+		<td style="height: 58px; width: 177px">Customer Name</td>
+		<td style="height: 58px">
+					<input name="Text1" id="name" type="text" />
+		</td>
+	</tr>
+	<tr>
+		<td style="height: 55px; width: 177px">Order No.</td>
+		<td style="height: 55px">
+					<input name="Text2" id="order" type="text" />
+		</td>
+	</tr>
+	<tr>
+		<td style="height: 70px; width: 177px">Comments/Feedback</td>
+		<td style="height: 70px">
+					<textarea name="TextArea1" style="height: 44px; width: 236px"></textarea>
+		</td>
+	</tr>
+	<tr>
+		<td style="height: 70px; width: 177px">E-mail</td>
+		<td style="height: 70px">
+		
+			<input name="Text3" style="width: 253px" id="email" type="text" />
+		</td>
+	</tr>
+	<tr>
+		<td style="width: 177px">Press submit </td>
+		<td>
+		
+			<input name="Submit1" type="submit" value="Submit" />
+		</td>
+	</tr>
+</table>
+<p>Thanks for the Feedback.Your opinions are valuable to us.We will consider 
+your comments and respond to you soon.</p>
+</body>
+
+</html>
